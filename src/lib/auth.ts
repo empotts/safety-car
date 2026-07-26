@@ -2,8 +2,8 @@ import { betterAuth } from 'better-auth'
 import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { tanstackStartCookies } from 'better-auth/tanstack-start'
 import { passkey } from '@better-auth/passkey'
-import { env } from 'cloudflare:workers'
 import { db, schema } from '~/db'
+import { env } from '~/env'
 
 const secret = env.BETTER_AUTH_SECRET
 const baseURL = env.BETTER_AUTH_URL

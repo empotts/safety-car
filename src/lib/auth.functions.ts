@@ -1,10 +1,10 @@
 import { createServerFn } from '@tanstack/react-start'
 import { getRequestHeaders } from '@tanstack/react-start/server'
 import { asc, eq } from 'drizzle-orm'
-import { env } from 'cloudflare:workers'
 import { auth } from '~/lib/auth'
 import { db } from '~/db'
 import { session as sessionTable, user } from '~/db/schema'
+import { env } from '~/env'
 
 async function loadAccessSession() {
   const headers = getRequestHeaders()
