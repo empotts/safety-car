@@ -12,27 +12,27 @@
     "auth:generate": "pnpm dlx auth@latest generate --config ./src/lib/auth.ts --yes"
   },
   "dependencies": {
-    "@better-auth/passkey": "^1.6.23",
-    "@tanstack/react-router": "^1.170.17",
-    "@tanstack/react-router-devtools": "^1.167.0",
-    "@tanstack/react-start": "^1.168.27",
+    "@better-auth/passkey": "^1.7.1",
+    "@tanstack/react-router": "^1.170.30",
+    "@tanstack/react-router-devtools": "^1.167.1",
+    "@tanstack/react-start": "^1.168.47",
     "better-auth": "^1.6.23",
     "drizzle-orm": "^0.45.2",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^5.20260726.1",
-    "@effect/platform-node": "4.0.0-beta.101",
-    "@tailwindcss/vite": "^4.3.2",
-    "@types/node": "^26.1.1",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.3",
+    "@cloudflare/workers-types": "^5.20260819.1",
+    "@effect/platform-node": "4.0.0-rc.110",
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^26.2.0",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.0.5",
     "alchemy": "2.0.0-beta.64",
     "drizzle-kit": "^0.31.10",
-    "effect": "4.0.0-beta.101",
-    "tailwindcss": "^4.3.2",
+    "effect": "4.0.0-rc.110",
+    "tailwindcss": "^4.3.3",
     "typescript": "^7.0.2",
     "vite": "^8.1.4"
   }
