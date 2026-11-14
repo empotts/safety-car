@@ -7,6 +7,11 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
+  build: {
+    rolldownOptions: {
+      external: ['cloudflare:workers'],
+    },
+  },
   server: {
     port: 3000,
   },
