@@ -2,12 +2,13 @@ import * as Alchemy from 'alchemy'
 import * as Cloudflare from '@alchemy.run/cloudflare'
 import * as Config from 'effect/Config'
 import * as Effect from 'effect/Effect'
+import { prepareAlchemyMigrations } from './scripts/alchemy-migrations'
 
 export const Database = Cloudflare.D1.Database(
   'Database',
   Alchemy.Stack.useSync((stack) => ({
     name: stack.stage === 'prod' ? 'safety_car_db' : undefined,
-    migrations: './drizzle/migrations',
+    migrations: prepareAlchemyMigrations(),
   })),
 )
 

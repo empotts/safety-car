@@ -57,6 +57,13 @@ The plan and deploy commands target the isolated `prod` stage. Production uses
 the existing `safety-car` Worker and `safety_car_db` database; Alchemy reconciles
 those resources and applies pending SQL migrations automatically.
 
+Keep generating migrations with `pnpm db:generate`. The stack stages every
+top-level SQL file from `drizzle/migrations` into ignored
+`.alchemy/sql-migrations` on each run, preserving filenames and bytes. This
+keeps Alchemy beta.87 from reading incompatible Drizzle v0 metadata while
+preserving `drizzle/migrations/meta` for future generation. Do not edit applied
+migrations; add new migrations instead.
+
 Shell environment variables are a fallback for values absent from the selected
 file. This is useful in CI, where secrets can be injected by the CI provider
 instead of written to disk; omit `--env-file` there if no environment file is
